@@ -5,13 +5,9 @@ class Counter extends Component {
     count: 0,
   };
 
-  // constructor() {
-  //   super();
-  //   this.handleIncrement = this.handleIncrement.bind(this);
-  // }
-
   handleIncrement = () => {
-    console.log("Increment clicked", this);
+    // this.state.count++  <--- this will not work ni react
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
